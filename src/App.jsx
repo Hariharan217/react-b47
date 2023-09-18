@@ -1,11 +1,16 @@
-const App = () =>{
+const Hello = () =>{
 
-  
-  const now = new Date();
-  console.log(now);
+  return(
+<div>
+<p>Hello world!</p>
+</div>
+  )
+}
+
+const App = () =>{
   return(
     <div>
-      <p>Hello World! {now.toString()}</p>
+      <Hello />
     </div>
   )
 }
