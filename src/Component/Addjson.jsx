@@ -11,13 +11,12 @@ function jsonfunction(){
   let details ={
     name : name.current.value,
     age : age.current.value
-    
   }
   axios 
 .post(`http://localhost:3000/details/`, details)
-.then(response => {
-    // console.log(response.data)
-  })
+// .then(response => {
+//     // console.log(response.data)
+//   })
 }
 
   return (

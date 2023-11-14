@@ -18,9 +18,9 @@ function Changejson() {
       axios
       .put(`http://localhost:3000/details/${changes.id}`, changes)
 
-      .then(responce =>{
-        console.log(responce);
-      })
+      // .then(responce =>{
+      //   console.log(responce);
+      // })
     }
   return (
     <div>
