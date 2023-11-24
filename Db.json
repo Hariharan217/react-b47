@@ -1,13 +1,17 @@
 {
   "details": [
     {
-      "name": "hari",
-      "age": "25",
+      "teacher": "Hari",
+      "student": [
+        "HARAN"
+      ],
       "id": 1
     },
     {
-      "name": "jana",
-      "age": "25",
+      "teacher": "JANA",
+      "student": [
+        "NANDHA"
+      ],
       "id": 2
     }
   ]

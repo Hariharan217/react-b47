@@ -1,35 +1,62 @@
-import React, { useRef } from 'react'
+
 import axios from 'axios'
+import React, { useEffect, useRef, useState } from 'react'
 
 function Changejson() {
 
-    let name = useRef();
-    let age = useRef();
-    let id = useRef();
+  let teacher = useRef();
+  useEffect(() => { addDetails() }, [])
 
-    function changesfunction(){
+  let [array, setArray] = useState([]);
 
-      let changes = {
-        name :name.current.value,
-        age :age.current.value,
-        id :id.current.value
+  async function addDetails() {
+    await axios.get(`http://localhost:3000/details/`)
+      .then((responce) => {
+        setArray(responce.data)
+        // console.log(responce.data);
+      })
+  }
+  let [inputaddstudent, setInputaddstudent] = useState();
+  let student = useRef();
+
+  let objecttoadd = {};
+  function addstudent() {
+    objecttoadd.student.push(student.current.value);
+    axios
+      .put(`http://localhost:3000/details/${objecttoadd.id}`, objecttoadd)
+
+      alert("added")
+  }
+
+  function adding(event) {
+
+    for (let index = 0; index < array.length; index++) {
+      if (array[index].teacher == event.target.innerText) {
+        objecttoadd = array[index];
       }
+      // objecttoadd.student.push("jeeva");
 
-      axios
-      .put(`http://localhost:3000/details/${changes.id}`, changes)
-
-      // .then(responce =>{
-      //   console.log(responce);
-      // })
     }
+    setInputaddstudent(
+      <div>
+        <input ref={student}></input>
+        <button onClick={addstudent} >Submit</button>
+      </div>
+    )
+  }
+
   return (
     <div>
-
-        <input ref={name}></input><br />
-        <input ref={age}></input><br />
-        <input ref={id}></input><br />
-
-        <button onClick={changesfunction}>Changes</button>
+      <div className="dropdown">
+        <button className="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+          TEACHER
+        </button>
+        <ul className="dropdown-menu">
+          {array.map((ele) => {
+            return <li className="dropdown-item" key={ele.id} onClick={adding} >{ele.teacher}</li>
+          })}
+        </ul>
+      </div>{inputaddstudent}
     </div>
   )
 }

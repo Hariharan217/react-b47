@@ -1,29 +1,26 @@
-import axios from 'axios'
+import axios from 'axios';
 import React, { useRef } from 'react'
 
 function Addjson() {
+  function addteacher() {
+    // console.log();
 
-let name = useRef();
-let age =useRef();
+    let addobject = {
+      teacher: addteachername.current.value,
+      student: []
+    }
+     axios
+     .post('http://localhost:3000/details', addobject)
 
-function jsonfunction(){
-
-  let details ={
-    name : name.current.value,
-    age : age.current.value
+     alert("added")
   }
-  axios 
-.post(`http://localhost:3000/details/`, details)
-// .then(response => {
-//     // console.log(response.data)
-//   })
-}
 
+  let addteachername = useRef();
   return (
     <div>
-      <input ref={name}  ></input><br />
-      <input ref={age} ></input><br />
-      <button onClick={jsonfunction}>Add</button>
+      <input ref={addteachername} placeholder='Teacher to add' ></input>
+      <button onClick={addteacher} >Submit</button>
+
     </div>
   )
 }

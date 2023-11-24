@@ -12,13 +12,13 @@ function Navigation() {
                     <div className="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                             <li className="nav-item">
-                            <Link to="/add" className="nav-link active" aria-current="page">add</Link>
+                            <Link to="/add" className="nav-link active" aria-current="page">Add teacher</Link>
                             </li>
                             <li className="nav-item">
-                            <Link to="/change" className="nav-link active" aria-current="page">change</Link>
+                            <Link to="/change" className="nav-link active" aria-current="page">Add student</Link>
                             </li>
                             <li className="nav-item">
-                            <Link to="/delete" className="nav-link active" aria-current="page">delete</Link>
+                            <Link to="/delete" className="nav-link active" aria-current="page">Delete</Link>
                             </li>
                             
                         </ul>
