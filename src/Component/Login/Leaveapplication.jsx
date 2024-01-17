@@ -1,27 +1,23 @@
-import React, { useEffect, useRef, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { leaveapply } from '../apirequest/request'
 import getclass from '../apirequest/request'
-import { useNavigate } from 'react-router-dom'
 
- function Leaveapplication() {
-   
 
-    
+function Leaveapplication() {
+    async function handleclick(id) {
 
-   async function handleclick(id){
-       
-    leaveapply(id)
+        leaveapply(id)
     }
 
-const [classes, setclasses] = useState([])
+    const [classes, setclasses] = useState([])
 
-useEffect(()=>{goneclass()},[])
+    useEffect(() => { goneclass() }, [])
 
-async function goneclass() {
-    let res = await getclass()
-    setclasses(res)
-    
-}
+    async function goneclass() {
+        let res = await getclass()
+        setclasses(res)
+
+    }
     return (
         <div>
             <div className="dropdown">
@@ -29,16 +25,12 @@ async function goneclass() {
                 <button className="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                     --Class--
                 </button>
-                <ul style={{overflow:'scroll', height:'250px'}} className="dropdown-menu">{classes.map((e)=>{
-                       return  <li onClick={()=>{handleclick(e._id)}} ><a className="dropdown-item">{e.Title} </a></li>
-                    })}
-                   
+                <ul style={{ overflow: 'scroll', height: '250px' }} className="dropdown-menu">{classes.map((e) => {
+                    return <li onClick={() => { handleclick(e._id) }} ><a className="dropdown-item">{e.Title} </a></li>
+                })}
+
                 </ul>
             </div>
-
-
-
-
         </div>
     )
 }

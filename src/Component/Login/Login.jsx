@@ -2,7 +2,6 @@ import React, { useRef } from 'react'
 import { login } from '../apirequest/request'
 import { useNavigate } from 'react-router-dom'
 
-
 function Login() {
 
   let navigate = useNavigate()
@@ -15,14 +14,11 @@ function Login() {
 
     }
 
-    let res =await  login(detail)
-    if(res){
+    let res = await login(detail)
+    if (res) {
       localStorage.setItem("token", res)
       navigate('/class')
     }
-   
-
-    
 
   }
 
@@ -42,10 +38,8 @@ function Login() {
 
         <div style={{ flexDirection: 'column', alignItems: 'right', display: 'flex' }}><button className='button' onClick={handleclick}>Login</button></div>
 
-        <p style={{justifyContent: 'end', alignItems: 'center', display: 'flex'}} onClick={()=>{navigate('/forgetpassword')}} >Forget password</p>
-        <p style={{justifyContent: 'end', alignItems: 'center', display: 'flex'}} onClick={()=>{navigate('/forgetpassword')}}>New Registration</p> 
       </div>
-      
+
     </div>
   )
 }

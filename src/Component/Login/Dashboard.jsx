@@ -23,25 +23,21 @@ function Dashboard() {
 
     return (
 
-        <div style={{ display: 'flex', padding: '50px' }}>
+        <div style={{ display: 'flex', height: '100px', padding: '10px', margin: '10px' }}>
             <div className="card" style={{ width: "18rem" }}>
-                {/* <img src="..." className="card-img-top" alt="..."></img> */}
                 <div className="card-body">
                     <h5 className="card-title">Codecadak</h5>
                     <p className="card-text">{webcode.codecodak}</p>
-                    {/* <a href="#" className="btn btn-primary">Go somewhere</a> */}
                 </div>
             </div>
             <div className="card" style={{ width: "18rem" }}>
-                {/* <img src="..." className="card-img-top" alt="..."></img> */}
                 <div className="card-body">
                     <h5 className="card-title">Webcode</h5>
                     <p className="card-text">{webcode.webcode}</p>
-                    {/* <a href="#" className="btn btn-primary">Go somewhere</a> */}
                 </div>
             </div>
-           
-<Task name={studentClassname} />
+
+            <Task name={studentClassname} />
         </div>
 
     )

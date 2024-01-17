@@ -14,7 +14,6 @@ async function studentClassdetail() {
             'Authorization': 'Bearer ' + localStorage.getItem("token")
         }
     })
-    // console.log(res.data)
     return res.data;
 }
 
@@ -29,9 +28,7 @@ async function getoneclass(id) {
 }
 
 async function leaveapply(id) {
-
-    // console.log(id)
-    let res = await api.post('/class/leaveapply' , {id},{
+    let res = await api.post('/class/leaveapply', { id }, {
         headers: {
             'Authorization': 'Bearer ' + localStorage.getItem("token")
         }
@@ -42,8 +39,7 @@ async function leaveapply(id) {
 
 async function tasksubmission(id) {
 
-    // console.log('hi')
-    let res = await api.post('/class/tasksubmission', {id},{
+    let res = await api.post('/class/tasksubmission', { id }, {
         headers: {
             'Authorization': 'Bearer ' + localStorage.getItem("token")
         }
@@ -52,25 +48,11 @@ async function tasksubmission(id) {
     return res.data;
 }
 
-async function Passwordreset(email) {
-
-   let res = await api.post('/student/forgetpassword', {email})
-
-    // return res.data;
-}
-
 async function login(detail) {
- let res=   await api.put("/student/login", detail)
+    let res = await api.put("/student/login", detail)
 
-    
-
-        // .then((res) => {
-        //     console.log(res.data);
-        //     localStorage.setItem("token", res.data)
-        // })
-
-        return res.data
+    return res.data
 }
 
 
-export { getclass as default, login, studentClassdetail, getoneclass , leaveapply, tasksubmission, Passwordreset}
+export { getclass as default, login, studentClassdetail, getoneclass, leaveapply, tasksubmission }
