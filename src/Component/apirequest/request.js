@@ -54,5 +54,11 @@ async function login(detail) {
     return res.data
 }
 
+async function newregistration(details) {
+    console.log(details)
+    let res = await api.post('/student', details)
 
-export { getclass as default, login, studentClassdetail, getoneclass, leaveapply, tasksubmission }
+}
+
+
+export { getclass as default, login, studentClassdetail, getoneclass, leaveapply, tasksubmission, newregistration }

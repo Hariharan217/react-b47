@@ -8,6 +8,7 @@ import Login from './Component/Login/Login'
 import Leaveapplication from './Component/Login/Leaveapplication'
 import Task from './Component/Login/Task'
 import Syllabus from './Component/Login/Syllabus'
+import NewRegister from './Component/Login/NewRegister'
 
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
 
         <Routes>
           <Route path='/login' element={<Login />} />
+          <Route path='/newregister' element={<NewRegister />} />
           <Route path='/' element={<Navigation />}>
             <Route path='/dashboard' element={<Dashboard />} />
             <Route path='/leaveapplication' element={<Leaveapplication />} />

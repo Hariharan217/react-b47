@@ -29,8 +29,6 @@ function Navigation() {
                     <div className='navele'><Link to="/syllabus" className="nav-link active" aria-current="page">Syllabus</Link></div>
                     <div className='navele'><Link to="/leaveapplication" className="nav-link active" aria-current="page">Leave application</Link></div>
                     <div className='navele'><div onClick={handlelogout} className="nav-link active" aria-current="page">Logout</div></div>
-
-
                 </div>
 
                 <Outlet />

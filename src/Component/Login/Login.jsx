@@ -1,6 +1,7 @@
 import React, { useRef } from 'react'
 import { login } from '../apirequest/request'
 import { useNavigate } from 'react-router-dom'
+import NewRegister from './NewRegister'
 
 function Login() {
 
@@ -21,6 +22,10 @@ function Login() {
     }
 
   }
+  
+  function newregister(){
+   navigate('/newregister')
+  }
 
   let userid = useRef()
   let password = useRef()
@@ -37,6 +42,10 @@ function Login() {
 
 
         <div style={{ flexDirection: 'column', alignItems: 'right', display: 'flex' }}><button className='button' onClick={handleclick}>Login</button></div>
+
+        <div style={{justifyContent:'end', alignItems:'end', display:'flex'}}><button onClick={newregister} >New register</button></div>
+
+        {/* <div style={{justifyContent:'end', alignItems:'end', display:'flex'}} ><button>Forget password</button></div> */}
 
       </div>
 
