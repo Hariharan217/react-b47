@@ -11,14 +11,12 @@ function Leaveapplication() {
 
     const [classes, setclasses] = useState([])
 
-    // const [message, setmessage] = useState([])
-
     useEffect(() => { goneclass() }, [])
 
     async function goneclass() {
-        let result = await getclass()
-        setclasses(result)
-        // setmessage(res)
+        let res = await getclass()
+        setclasses(res)
+       
     }
     return (
         <div>
@@ -33,7 +31,7 @@ function Leaveapplication() {
 
                 </ul>
             </div>
-            <p style={{ justifyContent: 'center', alignItems: 'center', display: 'flex', fontSize: '20px', fontStyle: 'normal', color: 'green' }}>{message}</p>
+            
         </div>
     )
 }

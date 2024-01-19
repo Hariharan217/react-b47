@@ -1,7 +1,7 @@
 
 import axios from 'axios'
 
-let api = axios.create({baseURL: "https://capstone-t0bm.onrender.com" })
+let api = axios.create({baseURL: "http://localhost:5001" })
 
 export default api;
 
