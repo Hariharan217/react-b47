@@ -32,7 +32,7 @@ function Class() {
   return (
     <div style={{ height: '100vh', width: '85vw', justifyContent: 'right', alignItems: 'flex-start', display: 'flex ', flexDirection: 'row-reverse' }}>
 
-      <div style={{ display: 'grid', gridTemplateColumns: '30px', width: '30vw', margin: '10px', border: '3px solid #82cAFF', padding: '10px' }}>
+      <div style={{ display: 'grid', gridTemplateColumns: '30px 30px', width: '30vw', margin: '10px', border: '3px solid #82cAFF', padding: '10px' }}>
 
         {classname.map((e, i) => {
           return <div style={{ padding: '5px' }}>

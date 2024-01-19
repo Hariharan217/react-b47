@@ -17,16 +17,18 @@ function Dashboard() {
 
         setStudentClassname(res.class)
 
-
         setwebcode(res)
+        // console.log(res)
     }
+
+    
 
     return (
 
         <div style={{ display: 'flex', height: '100px', padding: '10px', margin: '10px' }}>
             <div className="card" style={{ width: "18rem" }}>
                 <div className="card-body">
-                    <h5 className="card-title">Codecadak</h5>
+                    <h5 className="card-title">Codecodak</h5>
                     <p className="card-text">{webcode.codecodak}</p>
                 </div>
             </div>

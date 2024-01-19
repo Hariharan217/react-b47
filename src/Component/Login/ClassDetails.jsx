@@ -28,7 +28,7 @@ function ClassDetails({ name, content }) {
 
             </div>
             <div>
-                <div><a href='https://docs.google.com/document/d/1QznT1zM4mI6dG0TODx5Xjs1GquMoSHO3xZ1USDnVM-w/edit?usp=sharing'>https://docs.google.com/document/d/1QznT1zM4mI6dG0TODx5Xjs1GquMoSHO3xZ1USDnVM-w/edit?usp=sharing</a></div>
+                <div><a href={name.Task}>{name.Task}</a></div>
                 <input onChange={(event) => { settask(event.target.value) }} />
                 <button onClick={Submittask} >Submit Task</button>
             </div>

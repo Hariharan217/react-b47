@@ -58,6 +58,8 @@ async function newregistration(details) {
     console.log(details)
     let res = await api.post('/student', details)
 
+    return res.data
+
 }
 
 
