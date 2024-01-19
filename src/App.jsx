@@ -9,6 +9,8 @@ import Leaveapplication from './Component/Login/Leaveapplication'
 import Task from './Component/Login/Task'
 import Syllabus from './Component/Login/Syllabus'
 import NewRegister from './Component/Login/NewRegister'
+import ForgetPassword from './Component/Login/Forgetpassword'
+import Resetpassword from './Component/Login/Resetpassword'
 
 
 function App() {
@@ -20,6 +22,8 @@ function App() {
         <Routes>
           <Route path='/login' element={<Login />} />
           <Route path='/newregister' element={<NewRegister />} />
+          <Route path='/forgetpassword' element={<ForgetPassword/>} />
+          <Route path='/passwordreset/:token' element={<Resetpassword/>} />
           <Route path='/' element={<Navigation />}>
             <Route path='/dashboard' element={<Dashboard />} />
             <Route path='/leaveapplication' element={<Leaveapplication />} />

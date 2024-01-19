@@ -45,6 +45,7 @@ async function tasksubmission(id) {
         }
     })
 
+
     return res.data;
 }
 
@@ -62,5 +63,23 @@ async function newregistration(details) {
 
 }
 
+async function Passwordreset(email) {
+   
+    let res = await api.post('/student/forgetpassword', {email})
 
-export { getclass as default, login, studentClassdetail, getoneclass, leaveapply, tasksubmission, newregistration }
+    return res.data
+
+}
+
+async function passwordchange(obj) {
+   
+    let res = await api.put('/student/passwordchange', obj)
+
+    // console.log(res)
+
+    return res.data
+
+}
+
+
+export { getclass as default, login, studentClassdetail, getoneclass, leaveapply, tasksubmission, newregistration , Passwordreset, passwordchange}

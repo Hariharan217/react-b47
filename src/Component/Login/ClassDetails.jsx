@@ -6,11 +6,15 @@ function ClassDetails({ name, content }) {
 
     const [task, settask] = useState("")
 
-    function Submittask() {
+    const [message, setmessage] = useState()
+
+    async function Submittask() {
         if (task == "") {
             alert("Submit taks in input")
-        } else { tasksubmission(id) }
-
+        } else {
+            let res = await tasksubmission(name._id)
+            setmessage(res)
+        }
     }
     return (
         <div style={{ width: '100vw' }}>
@@ -28,10 +32,12 @@ function ClassDetails({ name, content }) {
 
             </div>
             <div>
-                <div><a href={name.Task}>{name.Task}</a></div>
-                <input onChange={(event) => { settask(event.target.value) }} />
-                <button onClick={Submittask} >Submit Task</button>
+                <div><a href={name.Task}>{name.Task}</a></div><br />
+                <input placeholder='Submit task' onChange={(event) => { settask(event.target.value) }} />
+                <button onClick={Submittask} >Enter</button>
             </div>
+
+            <p style={{ justifyContent: 'center', alignItems: 'center', display: 'flex', fontSize: '20px', fontStyle: 'normal', color: 'green' }}>{message}</p>
 
         </div>
 
