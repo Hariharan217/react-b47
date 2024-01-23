@@ -14,7 +14,7 @@ function Task({ name }) {
   return (
     <div>
 
-      <div className="card" style={{ width: "14rem", display: 'flex', height: '80px' }}>        
+      <div className="card" style={{ width: "18rem", display: 'flex', height: '80px' }}>        
         <div className="card-body">
           <h5 className="card-title">Task Submissions</h5>
           <p className="card-text">{temp}</p>

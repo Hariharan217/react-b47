@@ -17,10 +17,12 @@ function ClassDetails({ name, content }) {
         }
     }
     return (
-        <div style={{ width: '100vw' }}>
-            <h2 style={{ padding: '5px' }}>CLASS</h2>
-            <div style={{ justifyContent: 'center', alignItems: 'center', display: 'flex', background: '#1E90ff', height: '50px', width: '50vw', margin: '5px', padding: '1px', fontWeight: 'bold', fontSize: '20px', color: 'white', borderRadius: '10px' }}>{name.Title}</div>
-            <div>
+        <div className='container'>
+            <div><h2 className='class' style={{ padding: '5px' }}>CLASS</h2></div>
+
+            <div className='title' style={{ justifyContent: 'center', alignItems: 'center', display: 'flex', background: '#1E90ff', height: '100px', width: '50vw', margin: '5px', padding: '1px', fontWeight: 'bold', fontSize: '20 px', color: 'white', borderRadius: '10px' }}>{name.Title}</div>
+
+            <div className='main'>
                 <ol type='1'>
                     <h6 style={{ fontWeight: 'bold' }}>CONTENT</h6>
                     <div>{content.map((e) => {
@@ -29,13 +31,14 @@ function ClassDetails({ name, content }) {
                         </li>
                     })}</div>
                 </ol>
-
-            </div>
-            <div>
-                <div><a href={name.Task}>{name.Task}</a></div><br />
+                <div className='main' >
+                <div className='task'><a href={name.Task}>{name.Task}</a></div><br />
                 <input placeholder='Submit task' onChange={(event) => { settask(event.target.value) }} />
                 <button onClick={Submittask} >Enter</button>
             </div>
+            </div>
+
+          
 
             <p style={{ justifyContent: 'center', alignItems: 'center', display: 'flex', fontSize: '20px', fontStyle: 'normal', color: 'green' }}>{message}</p>
 

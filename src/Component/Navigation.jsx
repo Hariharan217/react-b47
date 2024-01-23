@@ -20,9 +20,10 @@ function Navigation() {
     }
 
     return (
-        <div style={{ background: '#1E90ff30' }}><div style={{ background: '#1E90ff', height: '60px' }}></div>
-            <div style={{ display: 'grid', gridTemplateColumns: '15% 50%' }}>
-                <div className='navdiv'>
+        <div style={{ background: '#1E90ff30', height:'200vh', width:'100vw' }}>
+            <div style={{ background: '#1E90ff', height: '60px' }}></div>
+            <div className='navcontainer' style={{ display: 'grid', gridTemplateColumns: '15% 50%' }}>
+                <div className='navmedia' >
                     {/* <div className='navele'><Link to="/login" className="nav-link active" aria-current="page">Login</Link></div> */}
                     <div className='navele'><Link to="/class/" className="nav-link active" aria-current="page">Class</Link></div>
                     <div className='navele'><Link to="/dashboard" className="nav-link active" aria-current="page">Dashboard</Link></div>

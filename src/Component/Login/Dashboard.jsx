@@ -25,7 +25,7 @@ function Dashboard() {
 
     return (
 
-        <div style={{ display: 'flex', height: '100px', padding: '10px', margin: '10px' }}>
+        <div className='dashboard' >
             <div className="card" style={{ width: "18rem" }}>
                 <div className="card-body">
                     <h5 className="card-title">Codecodak</h5>
