@@ -1,34 +1,34 @@
-import React from 'react'
-import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
-import Login from './Component/User/Login';
-import Logout from './Component/User/Logout';
-import ForgotPassword from './Component/User/ForgetPassword';
-import ResetPassword from './Component/User/ResetPassword';
-import ActivationPage from './Component/User/ActivationPage';
-import Dashboard from './Component/Url/Dashboard';
-import GenerateUrls from './Component/Url/GenerateUrls';
-import ViewUrls from './Component/Url/ViewUrls';
+import React, { useEffect } from 'react'
+import { BrowserRouter, Route, Routes, useNavigate } from 'react-router-dom'
+import Navigation from './Component/Navigation'
+import './App.css'
+import Login from './Component/Resetpassword/Login'
+import NewRegister from './Component/Resetpassword/NewRegister'
+import ForgetPassword from './Component/Resetpassword/Forgetpassword'
+import Resetpassword from './Component/Resetpassword/Resetpassword'
+import Dashboard from './Component/Resetpassword/Dashboard'
+
 
 function App() {
   return (
-    <BrowserRouter>
-      <div>
-        <Routes>
-          <Route path='/signup' element={<Logout />} />
-          <Route path='/signin' element={<Login />} />
-         <Route path='/forgot_password' element={<ForgotPassword />} />
-          <Route path='/reset_password/:token' element={<ResetPassword />} />
-          <Route path='/activation_page/:token' element={<ActivationPage />} />
-          <Route path='/dashboard/:id' element={<Dashboard />} />
-          <Route path='/generate_url/:id' element={<GenerateUrls />} />
-          <Route path='/view_url/:id' element={<ViewUrls />} />
-         
-          <Route path="/" element={<Navigate to="/signin" replace />} /> 
-        </Routes> 
+    <div>
 
-      </div>
-    </BrowserRouter>
+      <BrowserRouter>
+
+        <Routes>
+          <Route path='/login' element={<Login />} />
+          <Route path='/newregister' element={<NewRegister />} />
+          <Route path='/forgetpassword' element={<ForgetPassword/>} />
+          <Route path='/passwordreset/:token' element={<Resetpassword/>} />
+          <Route path='/' element={<Navigation />}>
+            <Route path='/dashboard' element={<Dashboard />} />
+      </Route>
+        </Routes>
+      </BrowserRouter>
+
+    </div>
   )
+
 }
 
 export default App
