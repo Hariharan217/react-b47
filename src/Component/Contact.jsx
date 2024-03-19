@@ -10,8 +10,8 @@ function Contact() {
   const [message, setmessage] = useState()
 
   async function handleclick() {
-    await axios.post('http://localhost:5001/', { name, mail, mobile, mailsubject, message })
-
+    let res = await axios.post('https://b47-be-1.onrender.com', { name, mail, mobile, mailsubject, message })
+     alert(res.data)
   }
 
   return (
