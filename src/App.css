@@ -638,22 +638,25 @@ img {
 @media(max-width: 952px) {
     .header {
         height: 90px;
-        width: 85vh;
-        background-color: var(--bg-color);
+        width: 100vh;
+        /* background-color: var(--bg-color); */
+        background-color: yellowgreen;
+        margin: 0;
+        display: none;
     }
 
     .navbar {
-        margin-left: 20px;
+        /* margin-left: 20px;
         margin-bottom: 20px;
         height: 100px;
-        width: 85vh;
         margin-top: 10px;
         display: grid;
         grid-template-columns: auto auto;
         padding: 10px;
-        /* width: vh; */
-        /* background-color: red; */
+        background-color: red; */
+        display: none;
     }
+    
 
     .home-content h1 {
         font-size: 30px;
