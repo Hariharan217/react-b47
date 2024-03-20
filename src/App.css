@@ -305,6 +305,7 @@ img {
         font-weight: 900;
         font-size: 13px;
     }
+    
 }
 
 .abt-row {
@@ -636,18 +637,22 @@ img {
 
 @media(max-width: 952px) {
     .header {
-        height: 80px;
-        width: 100vh;
+        height: 90px;
+        width: 85vh;
+        background-color: var(--bg-color);
     }
 
     .navbar {
-        margin-right: 10px;
+        margin-left: 20px;
+        margin-bottom: 20px;
+        height: 100px;
+        width: 85vh;
         margin-top: 10px;
         display: grid;
-        grid-template-columns: auto auto auto;
+        grid-template-columns: auto auto;
         padding: 10px;
-
-
+        /* width: vh; */
+        /* background-color: red; */
     }
 
     .home-content h1 {
@@ -670,8 +675,8 @@ img {
     }
 
     .portfolio a {
-        margin-right: 250px;
-        width: 100px;
+        /* margin-right: 0px; */
+        /* width: 30px; */
         height: 300px;
     }
     .portfolio a img {
@@ -687,7 +692,7 @@ img {
     }
     .contact{
         /* background-color: red; */
-        width: 100vw;
+        width: 90vw;
         margin-left: -18px;
     }
     .input-box{
@@ -699,15 +704,25 @@ img {
     }
     .textarea-field{
         
-        width: 100vw;
+        width: 90vw;
     }
     .btn-box {
       
-        width: 100vh;
+        width: 90vh;
         
     }
     .details{
     
-        width: 100vh;
+        width: 90vh;
+    }
+    .skills{
+        height: 130vh;
+        width: 95vw;
+        /* background-color: red; */
+    }
+    #resume {
+        
+        font-size: 30px;
+        
     }
 }
