@@ -11,7 +11,7 @@ import Skill from './Component/Skill'
 
 function App() {
     return (
-        <>
+        <div className='main' >
             <BrowserRouter>
                 <Navigation />
                 <Routes>
@@ -23,7 +23,7 @@ function App() {
                     <Route path='/skill' element={<Skill />} />
                 </Routes>
             </BrowserRouter>
-        </>
+        </div>
     )
 }
 

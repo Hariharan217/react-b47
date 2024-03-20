@@ -280,9 +280,10 @@ img {
 
 @media screen and (max-width: 952px) {
     .about {
-        height: 500px;
+        height: 400px;
         padding: 18px;
-        margin-top: 28px;
+        margin-top: 95px;
+        /* background-color: red; */
     }
 
     .image img {
@@ -292,19 +293,27 @@ img {
     .abt-det {
         flex: 1;
         text-align: justify;
+        
+    
     }
 
 
     .abt-det h2 {
         color: #3330e4;
         text-align: center;
+        
+        /* margin-top: 40px; */
     }
 
     .abt-det p {
         color: honeydew;
         font-weight: 900;
         font-size: 13px;
+        /* background-color: red; */
     }
+    /* .abt-row{
+        background-color: red;
+    } */
     
 }
 
@@ -636,31 +645,35 @@ img {
 }
 
 @media(max-width: 952px) {
+    .main{
+        width: 100vh;
+    }
     .header {
         height: 90px;
-        width: 100vh;
-        /* background-color: var(--bg-color); */
-        background-color: yellowgreen;
+        width: 88vh;
+        background-color: var(--bg-color);
+        /* background-color: yellowgreen; */
         margin: 0;
-        display: none;
+       
     }
 
     .navbar {
-        /* margin-left: 20px;
+        /* margin-left: 30px; */
         margin-bottom: 20px;
         height: 100px;
         margin-top: 10px;
         display: grid;
         grid-template-columns: auto auto;
         padding: 10px;
-        background-color: red; */
-        display: none;
+        /* background-color: red; */
+        
     }
     
 
     .home-content h1 {
         font-size: 30px;
-
+        width: 50vh;
+ 
     }
 
     .home-content h3 {
@@ -670,6 +683,7 @@ img {
 
     .home-content p {
         font-size: 15px;
+        /* background-color: red; */
 
     }
 
@@ -694,8 +708,8 @@ img {
         margin-left: 50px;
     }
     .contact{
-        /* background-color: red; */
-        width: 90vw;
+        background-color: red;
+        width: 100vw;
         margin-left: -18px;
     }
     .input-box{
@@ -720,7 +734,7 @@ img {
     }
     .skills{
         height: 130vh;
-        width: 95vw;
+        /* width: 95vw; */
         /* background-color: red; */
     }
     #resume {
